@@ -1,0 +1,14 @@
+<h1>News Feed</h1>
+
+<div *ngFor="let item of items | async" class="card">
+  <item-detail [item]='item'></item-detail>
+</div>
+
+<loading-spinner *ngIf="showSpinner"></loading-spinner>
+
+
+
+<hr>
+
+<item-form></item-form>
+<button type="button" class="button is-danger" (click)='deleteItems()'>Delete post</button>
